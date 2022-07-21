@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iCloud CalDAV URL Generator</title>
+  <script src="index.js" defer></script>
+</head>
+
+<body>
+  <h1>iCloud CalDAV URL Generator</h1>
+
+  <p>
+    Following this <a href="https://frightanic.com/apple-mac/thunderbird-icloud-calendar-sync/">tutorial</a>, you can
+    use Thunderbird to manage your iCloud calendar.
+    At one point, you will need to copy an url and extract some informations from it. You need to do that by hand, which
+    is
+    error prone.
+  </p>
+  <p>
+    This tool eleminates that. Paste the url in the first input field, and it will generate the iCloud url in the
+    second input field for you, which you then copy and paste into Thunderbird.
+  </p>
+  <p>
+    Nothing is transmitted to any server. All is done locally in your browser.
+  </p>
+
+  <form>
+    <fieldset>
+
+      <label for="sourceUrl">Source URL:</label>
+
+      <!-- TODO: add pattern -->
+      <input type="url" name="sourceUrl" id="sourceUrl" size="30" placeholder="https://p99-calendarws.icloud.com/" required>
+
+      <input type="button" id="pasteButton" value="Paste" hidden>
+
+    </fieldset>
+
+    <fieldset>
+
+      <label for="targetUrl">iCloud URL:</label>
+
+      <input type="url" name="targetUrl" id="targetUrl" size="30" placeholder="https://p99-caldav.icloud.com/" readonly>
+
+      <input type="button" id="copyButton" value="Copy">
+
+    </fieldset>
+  </form>
+</body>
+
+</html>
