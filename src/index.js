@@ -24,7 +24,7 @@ targetUrl.addEventListener("focus", () => {
 const pasteButton = document.getElementById("pasteButton")
 
 if(navigator.clipboard.readText) // Firefox doesn't support reading from the clipboard
-  pasteButton.removeAttribute("hidden")
+  pasteButton.hidden = false
 
 pasteButton.addEventListener("click", () => {
   navigator.clipboard
