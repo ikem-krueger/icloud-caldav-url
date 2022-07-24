@@ -7,7 +7,6 @@ function generateUrl() {
 }
 
 const sourceUrl = document.getElementById("sourceUrl")
-const targetUrl = document.getElementById("targetUrl")
 
 sourceUrl.addEventListener("keyup", () => {
   generateUrl()
@@ -16,6 +15,8 @@ sourceUrl.addEventListener("keyup", () => {
 sourceUrl.addEventListener("focus", () => {
   sourceUrl.select()
 })
+
+const targetUrl = document.getElementById("targetUrl")
 
 targetUrl.addEventListener("focus", () => {
   targetUrl.select()
