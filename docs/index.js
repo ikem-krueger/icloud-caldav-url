@@ -12,6 +12,10 @@ sourceUrl.addEventListener("keyup", () => {
   generateUrl()
 })
 
+sourceUrl.addEventListener("drop", () => {
+  generateUrl()
+})
+
 sourceUrl.addEventListener("focus", () => {
   sourceUrl.select()
 })
@@ -24,7 +28,7 @@ targetUrl.addEventListener("focus", () => {
 
 const pasteButton = document.getElementById("pasteButton")
 
-if(navigator.clipboard.readText) // Firefox doesn't support reading from the clipboard
+if (navigator.clipboard.readText) // Firefox doesn't support reading from the clipboard
   pasteButton.hidden = false
 
 pasteButton.addEventListener("click", () => {
